@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="petshop" match-name="payment_status"/>
+  <table-filter match-catalog="petshop" match-name="payment_user_mapping"/>
+  <table-filter match-catalog="petshop" match-name="persistent_logins"/>
+  <table-filter match-catalog="petshop" match-name="pet"/>
+  <table-filter match-catalog="petshop" match-name="pet_description"/>
+  <table-filter match-catalog="petshop" match-name="user"/>
+</hibernate-reverse-engineering>

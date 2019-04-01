@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+       <tiles-definitions>
+        <definition name="base.definition" template="/WEB-INF/views/layout/layout.jsp">
+          <put-attribute name="title" value=""/>
+          <put-attribute name="header" value="/WEB-INF/views/SidePartsOfBody/header.jsp"/>
+          <put-attribute name="body" value=""/>
+          <put-attribute name="footer" value="/WEB-INF/views/SidePartsOfBody/footer.jsp"/>
+        </definition>
+        
+<!-- #####################Starting of User Side##############################  -->        
+        <definition name="frontPage" extends="base.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/body/main_page.jsp"/>
+        </definition>
+        
+        <definition name="petDescription" extends="base.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/body/pet_description.jsp"/>
+        </definition>
+        
+        <definition name="paymentStatus" extends="base.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/body/payment_status.jsp"/>
+        </definition>
+        
+        <definition name="saved_Records" extends="base.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/body/TransactionSuccessDisplay.jsp"/>
+        </definition>
+        
+        <definition name="login" extends="base.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/body/Login.jsp"/>
+        </definition>
+  
+<!-- ####################Starting of Admin Side###################################### -->
+
+  <definition name="login.definition" template="/WEB-INF/views/layout/Admin_layout.jsp">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="header" value=""/>
+          <put-attribute name="sideMenu" value=""/>
+          <put-attribute name="body" value=""/>
+          <put-attribute name="footer" value=""/>
+   </definition>
+
+   <definition name="admin.definition" template="/WEB-INF/views/layout/Admin_layout.jsp">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="sideMenu" value="/WEB-INF/views/AdminImplementation/sideMenu.jsp"/>
+          <put-attribute name="header" value="/WEB-INF/views/AdminImplementation/Admin_header.jsp"/>
+          <put-attribute name="body" value=""/>
+          <put-attribute name="footer" value="/WEB-INF/views/AdminImplementation/Admin_footer.jsp"/>
+   </definition>
+   
+   <definition name="adminLoginPage" extends="login.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/Admin_Login.jsp"/>
+   </definition>
+   
+   <definition name="dashboard" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/dashboard.jsp"/>
+   </definition>
+   
+   <definition name="admin_user_details" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/admin_user_details.jsp"/>
+   </definition>
+                
+   <definition name="admin_single_user_information" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/admin_single_user_information.jsp"/>
+   </definition>
+   
+   <definition name="total_transaction_details" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/totalTransactionInformation.jsp"/>
+   </definition>
+   
+   <definition name="single_transaction_details" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/admin_single_transaction_information.jsp"/>
+   </definition> 
+        
+   <definition name="unsold_animal_information" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/UnsoldAnimalInformation.jsp"/>
+   </definition>
+   
+   <definition name="add_product_details" extends="admin.definition">
+          <put-attribute name="title" value="OnlinePetShop"/>
+          <put-attribute name="body" value="/WEB-INF/views/AdminImplementation/UnsoldAnimalAddAndEdit.jsp"/>
+   </definition>         
+        
+       </tiles-definitions>
